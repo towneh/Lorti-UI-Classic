@@ -16,7 +16,7 @@
     self.defaultPoint = rGetPoint(self)
     table.insert(dragFrameList,self) --add frame object to the list
     --anchor a dragable frame on self
-    local df = CreateFrame("Frame",nil,self)
+    local df = CreateFrame("Frame", nil, self, BackdropTemplateMixin and "BackdropTemplate")
     df:SetAllPoints(self)
     df:SetFrameStrata("HIGH")
     df:SetHitRectInsets(inset or 0,inset or 0,inset or 0,inset or 0)
@@ -282,7 +282,7 @@
   ---------------------------------------
 
   --buff drag frame
-  local bf = CreateFrame("Frame", "rBFS_BuffDragFrame", UIParent)
+  local bf = CreateFrame("Frame", "rBFS_BuffDragFrame", UIParent, BackdropTemplateMixin and "BackdropTemplate")
   bf:SetSize(cfg.buffFrame.button.size,cfg.buffFrame.button.size)
   bf:SetPoint(cfg.buffFrame.pos.a1,cfg.buffFrame.pos.af,cfg.buffFrame.pos.a2,cfg.buffFrame.pos.x,cfg.buffFrame.pos.y)
   if cfg.buffFrame.userplaced then
@@ -291,7 +291,7 @@
 
   if not cfg.combineBuffsAndDebuffs then
     --debuff drag frame
-    local df = CreateFrame("Frame", "rBFS_DebuffDragFrame", UIParent)
+    local df = CreateFrame("Frame", "rBFS_DebuffDragFrame", UIParent, BackdropTemplateMixin and "BackdropTemplate")
     df:SetSize(cfg.debuffFrame.button.size,cfg.debuffFrame.button.size)
     df:SetPoint(cfg.debuffFrame.pos.a1,cfg.debuffFrame.pos.af,cfg.debuffFrame.pos.a2,cfg.debuffFrame.pos.x,cfg.debuffFrame.pos.y)
     if cfg.debuffFrame.userplaced then
