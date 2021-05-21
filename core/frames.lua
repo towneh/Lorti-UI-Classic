@@ -429,7 +429,7 @@ for _, v in pairs({a, b, c, d
 end
 
 -- HONOR
-local a, b, c, d = HonorFrame:GetRegions()
+local a, b, c, d = PVPFrame:GetRegions()
 for _, v in pairs({a, b, c, d
 
 }) do
