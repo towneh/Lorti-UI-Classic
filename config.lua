@@ -54,7 +54,7 @@
   }
 
   cfg.macroname = {
-    show            = false,
+    show            = true,
     fontsize        = 12,
     pos1             = { a1 = "BOTTOMLEFT", x = 0, y = 0 },
     pos2             = { a1 = "BOTTOMRIGHT", x = 0, y = 0 }, --important! two points are needed to make the macroname be inside of the button
@@ -90,7 +90,7 @@
     userplaced      = true, --want to place the bar somewhere else?
     rowSpacing      = 10,
     colSpacing      = 7,
-    buttonsPerRow   = 10,
+    buttonsPerRow   = 12,
     button = {
       size              = 28,
     },
@@ -129,7 +129,7 @@
     userplaced      = true, --want to place the bar somewhere else?
     rowSpacing      = 10,
     colSpacing      = 7,
-    buttonsPerRow   = 10,
+    buttonsPerRow   = 12,
     button = {
       size              = 28,
     },
